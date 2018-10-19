@@ -67,7 +67,6 @@
     "git.rebaseWhenSync": true,
     "git.branchWhitespaceChar": "-",
     "git.branchValidationRegex": "^(features|fixes|users)/[a-zA-Z0-9-/]+$",
-    "git.enableCommitSigning": true,
     "git.confirmSync": false,
     "docker.attachShellCommand.linuxContainer": "powershell",
     "powershell.codeFormatting.openBraceOnSameLine": false,
