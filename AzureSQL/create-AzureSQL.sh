@@ -13,6 +13,9 @@ servername=$AzureSQL-server
 startip=0.0.0.0
 endip=0.0.0.0
 
+homeStart="31.201.214.198"
+homeEnd="31.201.214.198"
+
 az sql server create \
     --name $servername \
     --resource-group $ResourceGroup \
@@ -26,6 +29,13 @@ az sql server firewall-rule create \
     -n AllowAzureServices \
     --start-ip-address $startip \
     --end-ip-address $endip
+
+az sql server firewall-rule create \
+    --resource-group $ResourceGroup \
+    --server $servername \
+    -n AllowHome \
+    --start-ip-address $homeStart \
+    --end-ip-address $homeEnd
 
 az sql db create \
     --resource-group $ResourceGroup \
